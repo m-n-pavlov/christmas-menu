@@ -29,8 +29,19 @@
   justify-content: center;
   gap: 50px; /* задает расстояние между секциями */
   margin: 0 auto; /* центрирует весь контент по горизонтали */
-  width: 390px; /* ограничивает ширину для удобства чтения */
+  /*width: 390px; !* ограничивает ширину для удобства чтения *!*/
+  width: 100%;          /* растягиваем под экран */
+  max-width: 390px;     /* не больше 390px на больших экранах */
   padding: 10px; /* внутренние отступы */
+  background: radial-gradient(circle at center, #4a5546, #333c35, #1f241f); /* цвет фона контента */
+}
+
+
+.content {
+
+  width: 100%;          /* растягиваем под экран */
+  max-width: 390px;     /* не больше 390px на больших экранах */
+  padding: 10px;
   background: radial-gradient(circle at center, #4a5546, #333c35, #1f241f);
-  /* цвет фона контента */
+  box-sizing: border-box; /* учитывает padding в ширине */
 }

@@ -3,6 +3,7 @@ import './App.css';
 import {Header} from "@/components/Header/Header.jsx";
 import {Section} from "@/components/Section/Section.jsx";
 import ScrollToTopButton from "@/components/ArrowUpIcon/ArrowUpIcon.jsx";
+import Snow from "@/components/SnowContainer/Snow.jsx";
 
 export const App = () => {
 
@@ -19,6 +20,7 @@ export const App = () => {
 
   return (
     <div className="page">
+      <Snow />
       <Header />
       <main className="content">
         {/* Нужно использовать map для рендеринга всех секций */}
