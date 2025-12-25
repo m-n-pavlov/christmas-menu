@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/* Подключение CSS-стилей layout всего приложения и контентной части */
+import './App.css';
+import {Header} from "@/components/Header/Header.jsx";
+import {Section} from "@/components/Section/Section.jsx";
+import ScrollToTopButton from "@/components/ArrowUpIcon/ArrowUpIcon.jsx";
 
-function App() {
-  const [count, setCount] = useState(0)
+export const App = () => {
+
+  const sections = [
+    "Для обжорок",
+    "Для дожорок",
+    "Пузико набить",
+    "Для сластён",
+    "Хочу попить",
+    "А я накатить",
+    "Чайник поставь",
+    "За зайку"
+  ];
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
+    <div className="page">
+      <Header />
+      <main className="content">
+        {/* Нужно использовать map для рендеринга всех секций */}
+        {sections.map((sectionName) => (
+          <Section key={sectionName} name={sectionName} />
+        ))}
+      </main>
+      <ScrollToTopButton />
+    </div>
+  );
+};
