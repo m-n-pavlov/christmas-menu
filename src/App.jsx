@@ -2,7 +2,7 @@
 import './App.css';
 import {Header} from "@/components/Header/Header.jsx";
 import {Section} from "@/components/Section/Section.jsx";
-import ScrollToTopButton from "@/components/ArrowUpIcon/ArrowUpIcon.jsx";
+import ScrollToTopButton from "@/components/ArrowUpIcon/ScrollToTopButton.jsx";
 import Snow from "@/components/SnowContainer/Snow.jsx";
 
 export const App = () => {

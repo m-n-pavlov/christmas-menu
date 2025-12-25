@@ -22,7 +22,7 @@ function Snow() {
       }, parseFloat(snowflake.style.animationDuration) * 1000);
     };
 
-    const interval = setInterval(createSnowflake, 200);
+    const interval = setInterval(createSnowflake, 800);
 
     return () => {
       clearInterval(interval);
