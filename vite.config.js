@@ -5,6 +5,7 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/christmas-menu/', // имя репозитория на GitHub
   plugins: [
     react(),
     svgr({
